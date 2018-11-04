@@ -8,6 +8,7 @@ import (
 func main() {
 	http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
 		fmt.Println(r.URL.Path)
+		fmt.Println("12")
 	})
 	http.ListenAndServe(":9090", nil)
 }
