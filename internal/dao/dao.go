@@ -24,8 +24,7 @@ func (lr *LogRepository) DeleteByPrimaryKey(id int) {
 
 }
 func (lr *LogRepository) Insert(e entity.LogEntity) {
-	user := entity.LogEntity{}
-	lr.DB.Create(&user)
+	lr.DB.Create(&e)
 }
 func (lr *LogRepository) InsertSelective(e entity.LogEntity) {
 
